@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <tui-tabs tuiMobileTabs class="ms-auto">
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Elektronik')">
+                    {{ elektronik.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Spor Ürünleri')">
+                    {{ sporUrunleri.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Kişisel Bakım')">
+                    {{ kisiselBakim.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Market Ürünleri')">
+                    {{ market.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Kitap')">
+                    {{ kitap.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Film')">
+                    {{ film.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Kırtasiye')">
+                    {{ kirtasiye.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Giyim')">
+                    {{ giyim.text }}
+                </button>
+                <button tuiTab tuiRipple="var(--tui-text-01)" (click)="onClickGetText('Oyuncak')">
+                    {{ oyuncak.text }}
+                </button>
+            </tui-tabs>
+
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="center">
+            <input class="inputClass" type="text" [(ngModel)]="text" placeholder="Ürün Adı Giriniz"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 marginCard" *ngFor="let item of product | CategoryPipe:filterCategory 
+        | textFilter:text">
+       
+            <div class="cards">
+                <img src="./assets/img/{{item.product_path}}" class="imgStyle"
+                (click)="getDetails(item.product_name,item.product_desc,item.product_price,item.product_path)"
+                >
+                <p class="title">{{item.product_name}}</p>
+                <p class="productDesc">{{item.product_desc}}</p>
+                <button class="btnBox"
+                    (click)="addCart(item.product_name,item.product_desc,item.product_price,item.product_path);">
+                    <span>{{item.product_price}} TL</span>
+                </button>
+            </div>
+    
+        </div>
+    </div>
+</div>

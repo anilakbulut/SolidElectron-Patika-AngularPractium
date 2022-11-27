@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mb-3 mt-3">
+        <div class="col"></div>
+        <div class="col">
+            <a routerLink="/"  >
+                <img src="./assets/img/logo.png" width="100%" >
+            </a>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form class="b-form formArrange" [formGroup]="testForm">
+                <p>
+                    <tui-input formControlName="testValue1" minlength="3">
+                        E-mail
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+                <p>
+                    <tui-input formControlName="testValue2" minlength="3">
+                        Password
+                        <input tuiTextfield inputmode="numeric" type="password"/>
+                    </tui-input>
+                </p>
+                <div class="btn btn-primary" (click)="checkUser()">Login</div>
+            </form>
+        </div>
+    </div>
+</div>

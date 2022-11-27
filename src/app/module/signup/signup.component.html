@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row mb-3 mt-3">
+        <div class="col"></div>
+        <div class="col">
+            <a routerLink="/">
+                <img src="./assets/img/logo.png" width="100%">
+            </a>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form class="b-form formArrange" [formGroup]="testForm">
+                <p>
+                    <tui-input formControlName="testValue1" minlength="3">
+                        Name
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+                <p>
+                    <tui-input formControlName="testValue2" minlength="3">
+                        Last Name
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+                <p>
+                    <tui-input formControlName="testValue3" minlength="7">
+                        E-Mail
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+                <p>
+                    <tui-input formControlName="testValue4" minlength="6">
+                        Password
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+                <p>
+                    <tui-input formControlName="testValue5" minlength="6">
+                        Password Again
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+
+                <p>
+                    <tui-input formControlName="testValue6" minlength="5">
+                        Address
+                        <input tuiTextfield inputmode="numeric" />
+                    </tui-input>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="btn btn-primary" (click)="add()">Create Account</div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-success" (click)="routeLogin()">I have Account</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<app-navbar></app-navbar>
+<app-introduction *ngIf="!isLogin"></app-introduction>
+<app-product *ngIf="isLogin"></app-product>
+<router-outlet></router-outlet>

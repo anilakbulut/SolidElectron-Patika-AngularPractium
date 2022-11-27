@@ -1,0 +1,103 @@
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.cards button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: rgb(15, 20, 68);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 10%;
+    width: 50%;
+    background-color: rgba(164, 149, 192, 0.144);
+}
+
+.cards button:hover {
+    opacity: 0.8;
+}
+
+.productDesc{
+    height: 5vh;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    margin-top: -30px;
+}
+.imgStyle{
+    height: 30vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards{
+    margin-bottom: 30px;
+    border-radius: 10%;
+    -webkit-box-shadow: -14px -7px 8px -9px rgba(173,173,173,1);
+    -moz-box-shadow: -14px -7px 8px -9px rgba(173,173,173,1);
+    box-shadow: -14px -7px 8px -9px rgba(173,173,173,1);
+    transition: 0.3s;
+}
+.cards:hover{
+    -webkit-box-shadow: -14px -7px 8px -9px rgba(173,173,173,1);
+    -moz-box-shadow: -14px -7px 8px -9px rgba(173,173,173,1);
+    box-shadow: -14px -7px 8px -9px rgba(173,173,173,1);
+    transition: 0.3s;  
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+
+}
+div.cards {
+    text-align: center;
+  }
+.title{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    overflow: hidden;
+    padding:30px
+}
+
+
+.btnBox:hover {
+    span{
+        display: none;
+    }
+
+}
+
+.btnBox:hover:before{
+    font-size: 18px;
+
+    color: rgb(24, 30, 226);
+    content: "Sepete Ekle";
+    transition: 1s;  
+
+}
+
+input[type=text] {
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+

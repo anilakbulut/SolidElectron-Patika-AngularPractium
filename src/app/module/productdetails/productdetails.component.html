@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center" >
+            <div class="cards">
+                <img src="./assets/img/{{product.product_path}}" class="imgStyle">
+                <p class="title">{{product.product_name}}</p>
+                <p class="productDesc">{{product.product_price}}</p>
+            </div>
+            <br>
+            <br>
+            <h3>Ürün Açıklaması:</h3>
+            <h4> {{product.product_desc}}</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+                <div class="btn btn-secondary " (click)="onClickMainPage()">
+                    Anasayfaya Dönmek İçin Tıklayınız!
+                </div>
+        </div>
+    </div>
+</div>

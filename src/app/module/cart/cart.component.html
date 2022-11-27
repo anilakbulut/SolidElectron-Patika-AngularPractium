@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col mt-3">
+            <div class="btn btn-light">
+                Sepetiniz : {{user.user_email}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 marginCard" 
+        *ngFor="let item of allProductList ">
+            <div class="cards">
+                <img src="./assets/img/{{item.product_path}}" class="imgStyle">
+                <p class="title">{{item.product_name}}</p>
+                <p class="productDesc">{{item.product_price}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="btn btn-secondary" (click)="onClickMainPage()">Anasayfaya Dönmek İçin Tıklayınız!</div>
+        </div>
+    </div>
+</div>

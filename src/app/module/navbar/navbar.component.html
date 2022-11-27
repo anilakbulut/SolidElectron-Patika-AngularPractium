@@ -1,0 +1,50 @@
+<div class="generalPage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <a href="javascript:void(0)">
+                            <img src="./assets/img/logo.png" width="300">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <tui-tabs tuiMobileTabs [(activeItemIndex)]="activeItemIndex2" class="ms-auto">
+                                <button tuiTab tuiRipple="var(--tui-text-01)" disable *ngIf="isLogin"
+                                routerLink="cart"
+                                >
+                                    <tui-svg class="tui-space_right-2" [src]="login.icon"></tui-svg>
+                                    Sepetim
+                                </button>
+                                <button tuiTab tuiRipple="var(--tui-text-01)" disable *ngIf="isLogin">
+                                    <tui-svg class="tui-space_right-2" [src]="login.icon"></tui-svg>
+                                    Kullanıcı: {{loginUser.user_email}}
+                                </button>
+                                <button tuiTab tuiRipple="var(--tui-text-01)"routerLink="login"
+                                *ngIf="!isLogin">
+                                    <tui-svg class="tui-space_right-2" [src]="login.icon"></tui-svg>
+                                    {{ login.text }}
+                                </button>
+                                <button tuiTab tuiRipple="var(--tui-text-01)" routerLink="signup"
+                                *ngIf="!isLogin">
+                                    <tui-svg class="tui-space_right-2" [src]="signup.icon"></tui-svg>
+                                    {{ signup.text }}
+                                </button>
+                                <button tuiTab tuiRipple="var(--tui-text-01)" (click) = "logout()" 
+                                routerLink="logout" *ngIf="isLogin">
+                                    <tui-svg class="tui-space_right-2" [src]="signout.icon"
+                                    ></tui-svg>
+                                    {{ signout.text }}
+                                </button>
+                            </tui-tabs>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
